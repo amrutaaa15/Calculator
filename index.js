@@ -1,7 +1,7 @@
 console.log("This is my First Calculator and Project 7")
 
 let calc = document.getElementById("calc");
-let uttons = document.querySelectorAll("button");
+let btns = document.querySelectorAll("button");
 let text=document.getElementById("text");
 let inputValue = "";
 const arrays=[];
@@ -9,8 +9,8 @@ const arrays=[];
 let temp;
 let maths;
 let input;
-for (button of buttons) {
-    button.addEventListener("click", (e) => {
+for (btn of btns) {
+    btn.addEventListener("click", (e) => {
         num = e.target.innerText;
         calc.value=maths;
         console.log("button text is", num);
@@ -35,8 +35,7 @@ for (button of buttons) {
             calc.value=inputValue;
         }
 
-        else if(num=="XY"|| num=="X"|| num=="Y"){
-            num="^";
+        else if(num=="^"){
             inputValue+=num;
             calc.value=inputValue; 
         }
@@ -49,11 +48,10 @@ for (button of buttons) {
                 temp=e.target.innerText;
                 console.log(temp);
                 inputValue=Math.pow(input,temp);
-                console.log("hie")
+                
             }
             else{
                 input=e.target.innerText;
-                console.log(input);
             }
          
                
